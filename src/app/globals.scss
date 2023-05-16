@@ -2,6 +2,7 @@
 
 :root {
   --accent-color: #00B686;
+  background: #f4f7f3;
 }
 
 body {
@@ -111,6 +112,8 @@ body {
 .project-section {
   margin-top: 75px;
 
+
+
   .project-title-wrapper>span {
     font-family: 'Montserrat';
     font-size: 24px;
@@ -148,33 +151,109 @@ body {
     }
 
   }
+
+
+
+  //tab styling
+
+  .ant-tabs-tab-btn {
+    color: #657372;
+    font-family: 'montserrat';
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .left-menu-wrapper {
+
+    //tab border-bottom
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      font-weight: 700;
+      color: #657372;
+    }
+
+    .ant-tabs-tab-btn {
+      color: #657372;
+      font-family: 'montserrat';
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>.ant-tabs-nav .ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab {
+      border-bottom: 1px solid #E9EBEB;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+    .project-section :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+      width: 100%;
+      border-bottom: 1px solid #BDC3C2;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+    .project-section .left-menu-wrapper :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+      padding: 20px;
+      min-width: 280px;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+      color: #657372;
+    }
+
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-right>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab {
+      font-weight: 500;
+    }
+  }
+
+
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #00B686;
+  }
+
+
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card>.ant-tabs-nav .ant-tabs-tab,
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab {
+    border: 1px solid #BDC3C2;
+    // background-color: #fff;
+  }
+
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active,
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab-active {
+    border-bottom: 1px solid #BDC3C2;
+  }
+
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+  :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    width: 100%;
+
+    :last-child() {
+      margin-left: auto !important;
+    }
+  }
+
 }
 
-.ant-tabs-tab-btn {
-  color: #657372;
-  font-family: 'montserrat';
-  font-weight: 700;
-  font-size: 16px;
-}
-
-//tab styling
-
-:where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #00B686;
-}
-
-
-:where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card >.ant-tabs-nav .ant-tabs-tab, :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card >div>.ant-tabs-nav .ant-tabs-tab{
-  border:1px solid #BDC3C2;
-  background-color: #fff;
-}
-:where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card.ant-tabs-top >.ant-tabs-nav .ant-tabs-tab-active, :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-card.ant-tabs-top >div>.ant-tabs-nav .ant-tabs-tab-active{
-  border-bottom:1px solid #BDC3C2;
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>.ant-tabs-nav .ant-tabs-ink-bar,
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>div>.ant-tabs-nav .ant-tabs-ink-bar {
+  display: none;
 }
 
 :where(.css-dev-only-do-not-override-15rg2km).ant-tabs >.ant-tabs-nav .ant-tabs-nav-list, :where(.css-dev-only-do-not-override-15rg2km).ant-tabs >div>.ant-tabs-nav .ant-tabs-nav-list{
-  width: 100%;
-  :last-child(){
-    margin-left: auto !important;
-  }
+  border-bottom: 1px solid #BDC3C2;
+}
+
+.flex-box-3 {
+  display: flex;
 }

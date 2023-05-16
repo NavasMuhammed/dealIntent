@@ -2,17 +2,21 @@
 import Hero from "../components/hero";
 import Topbar from "../components/topBar"
 import { Divider } from 'antd';
-export default function HomeLayout({
+import "../globals.scss"
+import ProjectComponent from "../components/project";
+export default function NewHomeLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <div className="home-layout">
+        <>
             <Topbar />
             <Divider style={{ margin: "20px 0px" }} />
             <Hero />
-            <div>{children}</div>
-        </div>
+            <ProjectComponent>
+                <div>{children}</div>
+            </ProjectComponent>
+        </>
     )
 }
