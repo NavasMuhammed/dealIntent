@@ -12,11 +12,9 @@ export default function NewHomeLayout({
     return (
         <>
             <Topbar />
-            <Divider style={{ margin: "20px 0px" }} />
+            <Divider style={{ margin: "20px 0px", background: "#D3D7D7" }} />
             <Hero />
-            <ProjectComponent>
-                <div>{children}</div>
-            </ProjectComponent>
+            <ProjectComponent />
         </>
     )
 }

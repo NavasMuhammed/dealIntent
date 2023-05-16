@@ -1,14 +1,11 @@
 import { Progress, Tabs } from 'antd';
 import React from 'react';
 import ProjectMenu from '../projectMenu';
+import CompanyProfile from '../companyProfile';
 
 interface IndexProps { }
 
-const ProjectComponent = ({
-    children,
-}: {
-    children: React.ReactNode
-}) => {
+const ProjectComponent = () => {
     return (
         <>
             <div className="project-section">
@@ -31,7 +28,9 @@ const ProjectComponent = ({
                             <Tabs.TabPane tab="Basic Info" key="tab1" >
                                 <div className="left-menu-wrapper">
                                     <Tabs tabPosition="left">
-                                        <Tabs.TabPane tab="Welcome" key="tab1">1</Tabs.TabPane>
+                                        <Tabs.TabPane tab="Welcome" key="tab1">
+                                            <CompanyProfile />
+                                        </Tabs.TabPane>
                                         <Tabs.TabPane tab="Product Capabilities" key="tab2">2</Tabs.TabPane>
                                         <Tabs.TabPane tab="Product Capabilities" key="tab3">3</Tabs.TabPane>
                                         <Tabs.TabPane tab="Customer Success Stories" key="tab4">4</Tabs.TabPane>

@@ -66,45 +66,53 @@ body {
   }
 
   .hero-background {
+    width: 100%;
+    position: relative;
+
+    >div {
+      position: unset !important;
+    }
+
     border-radius: 15px;
     margin: 20px 0;
-    display: flex;
-    background-image: url('/assets/Mask3.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+
+    .hero-image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
 
 
-    .hero-right {
-      flex: 3;
-      padding: 50px;
-      font-family: 'Montserrat';
-      font-size: 48px;
-      font-weight: 900;
+    .logo-wrapper {
+      position: absolute;
+      top: 74%;
+      left: 1%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      padding: 12px 24px;
+    }
 
-      span {
-        position: relative;
-        left: 20px;
-      }
-
+    .proposal-wrapper {
+      position: absolute;
+      top: 26%;
+      left: 70%;
+      width: min-content;
     }
 
     .hero-left {
       display: flex;
-      flex: 6;
       align-items: center;
-      position: relative;
+    }
 
-      .logo-wrapper {
-        position: absolute;
-        top: 145px;
-        left: 15px;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-radius: 10px;
-        padding: 12px 24px;
-      }
+    .hero-right {
+      font-family: 'Montserrat';
+      font-size: 42px;
+      font-weight: 900;
+      width: min-content;
     }
   }
 }
@@ -152,6 +160,161 @@ body {
 
   }
 
+  .company-profile {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .profile-title-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          font-family: 'Montserrat';
+          font-size: 24px;
+          color: #233735;
+          font-weight: 700;
+        }
+
+
+      }
+    }
+
+    .icon-arary {
+      width: fit-content;
+      padding: 8px;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid #D3D7D7;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    .profile-image-wrapper {
+      margin: 24px 0px 16px 0px;
+      width: 100%;
+
+      // >div {
+      //   position: unset !important;
+      // }
+
+      #pos-abs {
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #pos-abs2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .we-work {
+          padding: 24px 18px 34px 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 18px;
+          width: 100%;
+
+          .we-image {
+            object-fit: contain;
+            width: 50% !important;
+            position: relative !important;
+            height: unset !important;
+          }
+
+          span {
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+
+        ;
+      }
+
+      .profile-image {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+      }
+    }
+
+    .message-wrapper {
+      width: min-content;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: space-around;
+
+      .notification-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #00B686;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 8px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   //tab styling
@@ -178,7 +341,9 @@ body {
       font-weight: 400;
       font-size: 14px;
     }
-
+    :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left >.ant-tabs-content-holder, :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left >div>.ant-tabs-content-holder{
+      border-left:   none;
+    }
     :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>.ant-tabs-nav .ant-tabs-tab,
     :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
     :where(.css-dev-only-do-not-override-15rg2km).ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab,
@@ -203,6 +368,7 @@ body {
     .project-section .left-menu-wrapper :where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
       padding: 20px;
       min-width: 280px;
+      
     }
 
     :where(.css-dev-only-do-not-override-15rg2km).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -250,8 +416,14 @@ body {
   display: none;
 }
 
-:where(.css-dev-only-do-not-override-15rg2km).ant-tabs >.ant-tabs-nav .ant-tabs-nav-list, :where(.css-dev-only-do-not-override-15rg2km).ant-tabs >div>.ant-tabs-nav .ant-tabs-nav-list{
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
   border-bottom: 1px solid #BDC3C2;
+}
+
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs>.ant-tabs-nav,
+:where(.css-dev-only-do-not-override-15rg2km).ant-tabs>div>.ant-tabs-nav {
+  height: min-content;
 }
 
 .flex-box-3 {
