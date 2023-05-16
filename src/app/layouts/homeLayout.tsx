@@ -1,4 +1,5 @@
 "use client"
+import Hero from "../components/hero";
 import Topbar from "../components/topBar"
 import { Divider } from 'antd';
 export default function HomeLayout({
@@ -11,6 +12,7 @@ export default function HomeLayout({
             <Topbar />
             <Divider style={{ margin: "20px 0px" }} />
             <div className="vLine"></div>
+            <Hero />
             <div>{children}</div>
         </div>
     )

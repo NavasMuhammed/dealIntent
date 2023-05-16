@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Press+Start+2P&family=Roboto:wght@100;300;700;900&display=swap');
+
+:root {
+  --accent-color: #00B686;
+}
+
 body {
   padding: 20px 24px;
+
 }
 
 
@@ -23,6 +30,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+
       .badge {
         position: absolute;
         top: -5px;
@@ -37,6 +45,63 @@ body {
         align-items: center;
         font-size: 8px;
         font-weight: bold;
+      }
+    }
+  }
+}
+
+.hero-container {
+  .hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .hero-title {
+      font-family: 'Montserrat';
+      font-weight: 800;
+      font-size: 32px;
+      color: #04433B;
+    }
+  }
+
+  .hero-background {
+    border-radius: 15px;
+    margin: 20px 0;
+    display: flex;
+    background-image: url('/assets/Mask3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    .hero-right {
+      flex: 3;
+      padding: 50px;
+      font-family: 'Montserrat';
+      font-size: 48px;
+      font-weight: 900;
+      span{
+        position: relative;
+        left: 20px;
+      }
+
+    }
+
+    .hero-left {
+      display: flex;
+      flex: 6;
+      align-items: center;
+      position: relative;
+
+      .logo-wrapper {
+        position: absolute;
+        top: 145px;
+        left: 15px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        padding: 12px 24px;
       }
     }
   }
