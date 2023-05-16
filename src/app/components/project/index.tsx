@@ -26,6 +26,11 @@ const ProjectComponent = () => {
 
                         <Tabs type="card" tabBarGutter={10} >
                             <Tabs.TabPane tab="Basic Info" key="tab1" >
+
+                                <div className="profile-responsive" >
+                                    <CompanyProfile />
+                                </div>
+
                                 <div className="left-menu-wrapper">
                                     <Tabs tabPosition="left">
                                         <Tabs.TabPane tab="Welcome" key="tab1">
