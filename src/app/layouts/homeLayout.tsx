@@ -11,7 +11,6 @@ export default function HomeLayout({
         <div className="home-layout">
             <Topbar />
             <Divider style={{ margin: "20px 0px" }} />
-            <div className="vLine"></div>
             <Hero />
             <div>{children}</div>
         </div>

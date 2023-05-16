@@ -79,7 +79,8 @@ body {
       font-family: 'Montserrat';
       font-size: 48px;
       font-weight: 900;
-      span{
+
+      span {
         position: relative;
         left: 20px;
       }
@@ -104,5 +105,45 @@ body {
         padding: 12px 24px;
       }
     }
+  }
+}
+
+.project-section {
+  margin-top: 75px;
+
+  .project-title-wrapper>span {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .project-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .progress-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: 'Montserrat';
+      font-size: 14px;
+      color: #7B8786;
+      section{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .progress-wrapper>div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 10px;
+      width: 99.2%;
+      border-radius: 50px;
+      overflow: hidden;
+    }
+
   }
 }
