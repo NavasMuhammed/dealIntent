@@ -7,11 +7,7 @@ import ProjectMenu from "./components/projectMenu";
 import ProjectComponent from "./components/project";
 import NewHomeLayout from "./layouts/newHomeLayout";
 
-export default function Home({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function Home() {
 
   return (
     <RootLayout>
