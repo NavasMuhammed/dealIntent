@@ -1,13 +1,13 @@
-import { DealIcons } from "./components/icons";
 import RootLayout from "./layout";
-
+import HomeLayout from "./layouts/homeLayout";
+import "./globals.scss"
 
 export default function Home() {
   return (
     <RootLayout>
-      <div>
-        <DealIcons icon="search" selected={false} />
-      </div>
+      <HomeLayout>
+        {/* <div className="test">hi</div> */}
+      </HomeLayout>
     </RootLayout>
   )
 }
