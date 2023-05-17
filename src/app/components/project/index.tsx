@@ -1,4 +1,4 @@
-import { Progress, Tabs } from 'antd';
+import { Progress, Tabs, ConfigProvider } from 'antd';
 import React from 'react';
 import ProjectMenu from '../projectMenu';
 import CompanyProfile from '../companyProfile';
@@ -23,37 +23,62 @@ const ProjectComponent = () => {
                 </div>
                 <div className="project-content-wrapper">
                     <div>
+                        <ConfigProvider
+                            theme={{
+                                token: {
+                                    colorPrimary: '#00b96b',
+                                },
+                            }}
+                        >
+                            <Tabs type="card" tabBarGutter={10} >
+                                <Tabs.TabPane tab="Basic Info" key="tab1" >
 
-                        <Tabs type="card" tabBarGutter={10} >
-                            <Tabs.TabPane tab="Basic Info" key="tab1" >
+                                    <div className="profile-responsive" >
+                                        <CompanyProfile />
+                                    </div>
 
-                                <div className="profile-responsive" >
-                                    <CompanyProfile />
-                                </div>
-
-                                <div className="left-menu-wrapper">
-                                    <Tabs tabPosition="left">
-                                        <Tabs.TabPane tab="Welcome" key="tab1">
-                                            <CompanyProfile />
-                                        </Tabs.TabPane>
-                                        <Tabs.TabPane tab="Product Capabilities" key="tab2">2</Tabs.TabPane>
-                                        <Tabs.TabPane tab="Product Capabilities" key="tab3">3</Tabs.TabPane>
-                                        <Tabs.TabPane tab="Customer Success Stories" key="tab4">4</Tabs.TabPane>
-                                        <Tabs.TabPane tab="File Sharing" key="tab5">5</Tabs.TabPane>
-                                        <Tabs.TabPane tab="Our Deck" key="tab6">6</Tabs.TabPane>
-                                    </Tabs>
-                                </div>
-                            </Tabs.TabPane>
-                            <Tabs.TabPane tab="Files" key="tab2">
-                                <div >this is it 2</div>
-                            </Tabs.TabPane>
-                            <Tabs.TabPane tab="Mutual Action Plan" key="tab3">
-                                <div >this is it 2</div>
-                            </Tabs.TabPane>
-                            <Tabs.TabPane tab="Contact" key="tab4">
-                                <div >this is it 2</div>
-                            </Tabs.TabPane>
-                        </Tabs>
+                                    <div className="left-menu-wrapper">
+                                        <ConfigProvider
+                                            theme={{
+                                                token: {
+                                                    colorPrimary: '#657372',
+                                                },
+                                            }}
+                                        >
+                                            <Tabs tabPosition="left">
+                                                <Tabs.TabPane tab="Overview" key="tab1">
+                                                    <CompanyProfile />
+                                                </Tabs.TabPane>
+                                                <Tabs.TabPane tab="Welcome" key="tab2">
+                                                    <div className="dummy">Welcome</div>
+                                                </Tabs.TabPane>
+                                                <Tabs.TabPane tab="Product Capabilities" key="tab3">
+                                                    <div className="dummy">Product Capabilities</div>
+                                                </Tabs.TabPane>
+                                                <Tabs.TabPane tab="Customer Success Stories" key="tab4">
+                                                    <div className="dummy">Customer Success Stories</div>
+                                                </Tabs.TabPane>
+                                                <Tabs.TabPane tab="File Sharing" key="tab5">
+                                                    <div className="dummy">File Sharing</div>
+                                                </Tabs.TabPane>
+                                                <Tabs.TabPane tab="Our Deck" key="tab6">
+                                                    <div className="dummy">Our Deck</div>
+                                                </Tabs.TabPane>
+                                            </Tabs>
+                                        </ConfigProvider>
+                                    </div>
+                                </Tabs.TabPane>
+                                <Tabs.TabPane tab="Files" key="tab2">
+                                    <div className="dummy">Files</div>
+                                </Tabs.TabPane>
+                                <Tabs.TabPane tab="Mutual Action Plan" key="tab3">
+                                    <div className="dummy">Mutual Action Plan</div>
+                                </Tabs.TabPane>
+                                <Tabs.TabPane tab="Contact" key="tab4">
+                                    <div className="dummy">Contact</div>
+                                </Tabs.TabPane>
+                            </Tabs>
+                        </ConfigProvider>
                     </div>
                 </div>
             </div>

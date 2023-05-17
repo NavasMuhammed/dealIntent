@@ -4,12 +4,14 @@ import React from 'react';
 
 interface PageProps { }
 
-const Page: React.FC<PageProps> = (props) => {
+const Seccess: React.FC<PageProps> = (props) => {
     return (
         <>
-            <NewHomeLayout>success</NewHomeLayout>
+            <NewHomeLayout>
+                <div className="dummy1">Success</div>
+            </NewHomeLayout>
         </>
     );
 };
 
-export default Page;
+export default Seccess;

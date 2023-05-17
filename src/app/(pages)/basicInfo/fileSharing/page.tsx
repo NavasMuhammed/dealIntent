@@ -4,12 +4,14 @@ import React from 'react';
 
 interface PageProps { }
 
-const Page: React.FC<PageProps> = (props) => {
+const FileSharing: React.FC<PageProps> = (props) => {
     return (
         <>
-            <NewHomeLayout>fileShariing</NewHomeLayout>
+            <NewHomeLayout>
+                <div className="dummy1">File Sharing</div>
+            </NewHomeLayout>
         </>
     );
 };
 
-export default Page;
+export default FileSharing;
