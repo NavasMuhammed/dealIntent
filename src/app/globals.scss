@@ -4,6 +4,7 @@
   --accent-color: #00B686;
   background: #F2FBF9;
   animation: fadeIn 3s;
+  transition: all 3s ease;
 
   @keyframes fadeIn {
     0% {
