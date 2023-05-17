@@ -30,7 +30,7 @@ const ProjectComponent = () => {
                                 },
                             }}
                         >
-                            <Tabs type="card" tabBarGutter={10} >
+                            <Tabs type="card" tabBarGutter={10}  >
                                 <Tabs.TabPane tab="Basic Info" key="tab1" >
 
                                     <div className="profile-responsive" >
