@@ -4,12 +4,16 @@ import React from 'react';
 
 interface PageProps { }
 
-const Page: React.FC<PageProps> = (props) => {
+const Capabilities: React.FC<PageProps> = (props) => {
     return (
         <>
-            <NewHomeLayout>capabilities</NewHomeLayout>
+            <NewHomeLayout>
+                <div className="dummy1">
+                    <div className="dummy1">Capabilities</div>
+                </div>
+            </NewHomeLayout>
         </>
     );
 };
 
-export default Page;
+export default Capabilities;
