@@ -13,7 +13,9 @@ const Hero: React.FC<HeroProps> = (props) => {
             </div>
 
             <div className="hero-background">
-                <Image className="hero-image" src="/assets/Mask3.png" alt="" fill={true} />
+                <div className="hero-image-container">
+                    <Image className="hero-image" src="/assets/Mask3.png" alt="" fill={true} />
+                </div>
                 <div className="hero-left">
                     <div className="logo-wrapper">
                         <object data="/assets/weLogoS.svg" type="image/svg+xml"></object>
