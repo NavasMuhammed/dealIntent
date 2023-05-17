@@ -712,9 +712,39 @@ body {
     font-family: 'montserrat';
   }
 
+  .css-1fc8jnj.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+  .css-1fc8jnj.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    width: 230px;
+  }
+
+  .css-1fc8jnj.ant-tabs-left>.ant-tabs-content-holder,
+  .css-1fc8jnj.ant-tabs-left>div>.ant-tabs-content-holder {
+    border: none;
+  }
+
+  .css-1fc8jnj.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+  .css-1fc8jnj.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    background-color: #fff
+  }
+
+  .css-1fc8jnj.ant-tabs>.ant-tabs-nav,
+  .css-1fc8jnj.ant-tabs>div>.ant-tabs-nav {
+    height: 320px;
+  }
+
+  .css-1fc8jnj.ant-tabs>.ant-tabs-nav .ant-tabs-nav-list,
+  .css-1fc8jnj.ant-tabs>div>.ant-tabs-nav .ant-tabs-nav-list {
+    border-radius: 10px;
+  }
 
   .ant-tabs-nav .ant-tabs-ink-bar {
     display: none;
+  }
+
+  .css-1ovv16o.ant-tabs .ant-tabs-tab-btn {
+    font-weight: 600;
+    color: #657372;
+    font-family: 'montserrat';
   }
 
   // .ant-tabs-tab-btn {
