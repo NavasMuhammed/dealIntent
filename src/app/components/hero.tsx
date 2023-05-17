@@ -9,7 +9,12 @@ const Hero: React.FC<HeroProps> = (props) => {
         <div className="hero-container">
             <div className="hero-wrapper">
                 <span className="hero-title">WeWork + Salesforce</span>
-                <Button style={{ background: "#00B686", fontFamily: "Montserrat", fontWeight: 600, fontSize: 15 }} type="primary" size="large">Publish/Share</Button>
+                <div className="hero-button-small">
+                    <Button style={{ background: "#00B686", fontFamily: "Montserrat", fontWeight: 600, fontSize: 12 }} type="primary" size="middle">Publish/Share</Button>
+                </div>
+                <div className="hero-button-normal">
+                    <Button style={{ background: "#00B686", fontFamily: "Montserrat", fontWeight: 600, fontSize: 15 }} type="primary" size="large">Publish/Share</Button>
+                </div>
             </div>
 
             <div className="hero-background">

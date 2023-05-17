@@ -3,12 +3,29 @@
 :root {
   --accent-color: #00B686;
   background: #f4f7f3;
+  animation: fadeIn 3s;
+  transition: all 3s ease;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 body {
   padding: 20px 24px;
+  margin: 0px;
 
+  @media(max-width: 400px) {
+    padding: 10px 10px;
+  }
 }
+
 
 
 .topbar-container {
@@ -47,7 +64,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 399px) {
+    @media (max-width: 450px) {
       display: flex;
     }
 
@@ -69,7 +86,7 @@ body {
         background-color: #657372;
         border-radius: 100px;
         transform-origin: left;
-        transition: all 1s ease;
+        transition: all .1s ease;
 
 
       }
@@ -82,14 +99,12 @@ body {
       flex-direction: column;
     }
 
-
-
     .menu-items {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       width: 200px;
       border-bottom: 1px solid #58565631;
-      padding-bottom: 25px;
+      padding-bottom: 14px;
     }
 
     display: none;
@@ -106,6 +121,21 @@ body {
       display: flex;
       flex-direction: column;
       font-size: 12px;
+      gap: 5px;
+
+      >span {
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 600;
+        color: #000;
+      }
+
+      >span+span {
+        font-family: 'Montserrat';
+        font-size: 12px;
+        font-weight: 400;
+        color: #7B8786;
+      }
     }
 
     #last {
@@ -116,10 +146,10 @@ body {
       width: 80%;
       align-items: center;
       border-bottom: 1px solid #58565631;
-      padding-bottom: 25px;
+      padding-bottom: 14px;
     }
 
-   
+
 
     .notification-wrapper {
       position: relative;
@@ -143,13 +173,26 @@ body {
         font-weight: bold;
       }
     }
+
+    animation: fadeIn .2s;
+    transition: all 1s ease;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
   }
 
 
 
 
   .icons-container {
-    @media (min-width: 400px) {
+    @media (min-width: 450px) {
       display: flex;
     }
 
@@ -189,14 +232,36 @@ body {
     align-items: center;
     justify-content: space-between;
 
+    .hero-button-small {
+      display: none;
+
+      @media (max-width: 499px) {
+        display: block;
+      }
+    }
+
+    .hero-button-normal {
+      display: none;
+
+      @media (min-width: 500px) {
+        display: block;
+      }
+    }
+
     .hero-title {
       font-family: 'Montserrat';
       font-weight: 800;
       font-size: 32px;
       color: #04433B;
 
+
+
       @media (max-width: 769px) {
         font-size: 24px;
+      }
+
+      @media (max-width: 399px) {
+        font-size: 17px;
       }
     }
   }
@@ -213,7 +278,21 @@ body {
     margin: 20px 0;
 
     .hero-image {
-      @media (max-width: 768px) {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+      border-radius: 10px;
+
+      @media (max-width: 480px) {
+        object-fit: cover;
+        width: 100% !important;
+        position: relative !important;
+        height: 110px !important;
+        border-radius: 15px;
+      }
+
+      @media(min-width: 480px) and (max-width: 768px) {
         object-fit: cover;
         width: 100% !important;
         position: relative !important;
@@ -221,15 +300,17 @@ body {
         border-radius: 15px;
       }
 
-      object-fit: contain;
-      width: 100% !important;
-      position: relative !important;
-      height: unset !important;
-      border-radius: 10px;
+
     }
 
     .logo-wrapper {
-      @media (max-width: 768px) {
+      @media (max-width: 480px) {
+        scale: .5;
+        top: 58%;
+        left: -14%;
+      }
+
+      @media (min-width: 480px) and (max-width: 768px) {
         scale: .7;
         position: absolute;
         top: 64%;
@@ -257,8 +338,12 @@ body {
     .proposal-wrapper {
       position: absolute;
       top: 26%;
-      left: 70%;
+      left: 68%;
       width: min-content;
+
+      @media (max-width: 480px) {
+        left: 63%;
+      }
 
     }
 
@@ -273,7 +358,11 @@ body {
       width: min-content;
       font-size: 42px;
 
-      @media (max-width: 768px) {
+      @media (max-width: 480px) {
+        font-size: 18px;
+      }
+
+      @media (min-width: 480px) and (max-width: 768px) {
         font-size: 24px;
       }
     }
@@ -283,14 +372,25 @@ body {
 .project-section {
   margin-top: 75px;
 
+  @media (max-width: 480px) {
+    margin-top: 45px;
+  }
 
+  @media(min-width: 480px) and (max-width: 769px) {
+    margin-top: 65px;
+  }
 
   .project-title-wrapper>span {
     font-family: 'Montserrat';
     font-size: 24px;
     font-weight: 700;
 
-    @media(max-width: 769px) {
+    @media (max-width: 480px) {
+      font-size: 16px;
+      width: 235px;
+    }
+
+    @media(min-width: 480px) and (max-width: 769px) {
       font-size: 20px;
     }
   }
@@ -309,7 +409,14 @@ body {
       font-size: 14px;
       color: #7B8786;
 
-      @media (max-width: 769px) {
+      @media (max-width: 480px) {
+        font-size: 12px;
+        scale: 0.8;
+        height: 28px;
+        width: 142px;
+      }
+
+      @media (min-width: 480px) and (max-width: 769px) {
         scale: .9;
         font-size: 13px;
       }
@@ -355,7 +462,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 600px;
-
+    @media (max-width: 480px) {
+      height: 350px;
+    }
     .profile-title-wrapper {
       width: 100%;
       display: flex;
@@ -373,7 +482,11 @@ body {
           color: #233735;
           font-weight: 700;
 
-          @media(max-width: 769px) {
+          @media (max-width: 480px) {
+            font-size: 16px;
+          }
+
+          @media(min-width: 480px) and (max-width: 769px) {
             font-size: 20px;
           }
         }
@@ -383,7 +496,49 @@ body {
       }
     }
 
-    .icon-arary {
+    .icon-arary-normal-res {
+      display: none;
+      overflow: hidden;
+      width: 10px;
+      height: 22.5px;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      @media (max-width: 480px) {
+        display: flex;
+      }
+
+      span {
+        width: 5px;
+        height: 5px;
+        background-color: #657372;
+        border-radius: 100px;
+        transform-origin: left;
+        transition: all .1s ease;
+      }
+    }
+
+    .icon-arary-normal-res2 {
+      width: fit-content;
+      padding: 8px;
+      display: none;
+      gap: 9px;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid #D3D7D7;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(4px);
+
+      @media (max-width: 480px) {
+        display: flex;
+      }
+
+
+    }
+
+    .icon-arary-normal {
       width: fit-content;
       padding: 8px;
       display: flex;
@@ -394,6 +549,14 @@ body {
       border-radius: 10px;
       background-color: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(4px);
+
+      @media (max-width: 480px) {
+        display: none;
+      }
+
+      @media(min-width: 480px) and (max-width: 769px) {
+        font-size: 20px;
+      }
     }
 
     .profile-image-wrapper {
@@ -409,6 +572,10 @@ body {
         top: 18%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media (max-width: 480px) {
+          transform: translate(-50%, -36%);
+        }
       }
 
       #pos-abs2 {
@@ -421,6 +588,10 @@ body {
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 480px) {
+          transform: translate(-50%, -32%);
+        }
+
         .we-work {
           padding: 24px 18px 34px 18px;
           display: flex;
@@ -430,7 +601,14 @@ body {
           gap: 18px;
           width: 100%;
 
-          @media (max-width: 769px) {
+          @media (max-width: 480px) {
+            padding: 8px 8px 6px 8px;
+            gap: 14px;
+            width: 260px;
+            height: 107px;
+          }
+
+          @media (min-width: 480px) and (max-width: 769px) {
             width: 400px;
           }
 
@@ -448,6 +626,10 @@ body {
             font-family: 'Montserrat';
             font-size: 20px;
             font-weight: 700;
+
+            @media (max-width: 480px) {
+              font-size: 12px;
+            }
           }
         }
 
@@ -455,22 +637,19 @@ body {
       }
 
       .profile-image {
-
-        @media (max-width: 768px) {
-          object-fit: cover;
-          width: 100% !important;
-          position: relative !important;
-          height: 480px !important;
-          border-radius: 15px;
+        @media (max-width: 480px) {
+          height: 256px !important;
         }
 
-        @media (min-width: 769px) {
-          object-fit: contain;
-          width: 100% !important;
-          position: relative !important;
-          height: unset !important;
-          border-radius: 10px;
-        }
+
+        object-fit: cover;
+        width: 100% !important;
+        position: relative !important;
+        height: 480px !important;
+        border-radius: 15px;
+
+
+
       }
     }
 

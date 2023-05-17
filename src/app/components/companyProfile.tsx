@@ -12,7 +12,12 @@ const CompanyProfile: React.FC<CompanyProfileProps> = (props) => {
             <div className="profile-title-wrapper">
                 <section>
                     <span>Company Profile</span>
-                    <div className="icon-arary">
+                    <div className="icon-arary-normal-res">
+                        <span ></span>
+                        <span ></span>
+                        <span ></span>
+                    </div>
+                    <div className="icon-arary-normal">
                         <DealIcons icon="downArrow" selected={false} />
                         <Divider style={{ background: "#D3D7D7" }} type='vertical' />
                         <DealIcons icon="hide" selected={false} />
@@ -23,7 +28,21 @@ const CompanyProfile: React.FC<CompanyProfileProps> = (props) => {
             </div>
             <div className="profile-image-wrapper">
                 <Image className="profile-image" src="/assets/Mask2.png" alt="" fill={true} />
-                <div id="pos-abs" className="icon-arary">
+                <div id="pos-abs" className="icon-arary-normal">
+                    <div style={{ display: "flex", gap: 10, alignItems: "center", justifyContent: "center" }}>
+                        <DealIcons icon="document" selected={false} />
+                        <span>1/15</span>
+                    </div>
+                    <Divider style={{ background: "#D3D7D7" }} type='vertical' />
+                    <DealIcons icon="download" selected={false} />
+                    <Divider style={{ background: "#D3D7D7", height: "100%" }} type='vertical' />
+                    <DealIcons icon="zoomOut" selected={false} />
+                    <Divider style={{ background: "#D3D7D7" }} type='vertical' />
+                    <DealIcons icon="zoomIn" selected={false} />
+                    <Divider style={{ background: "#D3D7D7" }} type='vertical' />
+                    <DealIcons icon="open" selected={false} />
+                </div>
+                <div id="pos-abs" className="icon-arary-normal-res2">
                     <div style={{ display: "flex", gap: 10, alignItems: "center", justifyContent: "center" }}>
                         <DealIcons icon="document" selected={false} />
                         <span>1/15</span>

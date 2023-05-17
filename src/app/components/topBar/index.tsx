@@ -60,7 +60,7 @@ const Topbar: React.FC<TopbarProps> = (props) => {
                                                 <DealIcons icon="notification" selected={selectedId === item.id} />
                                                 <div className="badge">{count}</div>
                                             </div>
-                                            <span>{item.icon}</span>
+                                            <span >{item.icon}</span>
                                         </div>
                                 }
                             </div>
